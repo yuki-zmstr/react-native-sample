@@ -5,7 +5,7 @@ function CategoryGridTile({ title, color }) {
     <View>
       <Pressable>
         <View>
-          <Text>{title}]</Text>
+          <Text>{title}</Text>
         </View>
       </Pressable>
     </View>

@@ -1,5 +1,5 @@
-import { View, Text, TextInput, StyleSheet } from "react-native";
-import { GlobalStyles } from "../../constants/styles";
+import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { GlobalStyles } from '../../constants/styles';
 
 function Input({ label, style, textInputConfig }) {
   const inputStyles = [styles.input];
@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
   },
   inputMultiline: {
     minHeight: 100,
-    textAlignVertical: "top",
+    textAlignVertical: 'top',
   },
 });

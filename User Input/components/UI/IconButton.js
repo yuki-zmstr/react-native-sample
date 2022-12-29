@@ -1,7 +1,9 @@
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-function IconButton({ icon, size, color, onPress }) {
+const IconButton = ({
+  icon, size, color, onPress,
+}) => {
   return (
     <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
       <View style={styles.buttonContainer}>
@@ -9,7 +11,7 @@ function IconButton({ icon, size, color, onPress }) {
       </View>
     </Pressable>
   );
-}
+};
 
 export default IconButton;
 

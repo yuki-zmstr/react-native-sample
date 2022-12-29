@@ -1,7 +1,11 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import {
+  Pressable, StyleSheet, Text, View,
+} from 'react-native';
 import { GlobalStyles } from '../../constants/styles';
 
-function Button({ children, onPress, mode, style }) {
+const Button = ({
+  children, onPress, mode, style,
+}) => {
   return (
     <View style={style}>
       <Pressable onPress={onPress} style={({ pressed }) => pressed && styles.pressed}>
@@ -11,7 +15,7 @@ function Button({ children, onPress, mode, style }) {
       </Pressable>
     </View>
   );
-}
+};
 
 export default Button;
 

@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from 'react-native';
 
 import Input from './Input';
 
-function ExpenseForm() {
+const ExpenseForm = () => {
   const [inputValues, setInputValues] = useState({
     amount: '',
     date: '',
@@ -55,7 +55,7 @@ function ExpenseForm() {
       />
     </View>
   );
-}
+};
 
 export default ExpenseForm;
 

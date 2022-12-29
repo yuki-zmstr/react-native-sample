@@ -4,7 +4,7 @@ import ExpensesOutput from '../components/ExpensesOutput/ExpensesOutput';
 import { ExpensesContext } from '../store/expenses-context';
 import { getDateMinusDays } from '../util/date';
 
-function RecentExpenses() {
+const RecentExpenses = () => {
   const expensesCtx = useContext(ExpensesContext);
 
   const recentExpenses = expensesCtx.expenses.filter((expense) => {
@@ -21,6 +21,6 @@ function RecentExpenses() {
       fallbackText='No expenses registered for the last 7 days.'
     />
   );
-}
+};
 
 export default RecentExpenses;

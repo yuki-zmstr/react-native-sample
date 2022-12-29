@@ -8,7 +8,7 @@ import { ExpensesContext } from '../store/expenses-context';
 
 import ExpenseForm from '../components/ManageExpense/ExpenseForm';
 
-function ManageExpense({ route, navigation }) {
+const ManageExpense = ({ route, navigation }) => {
   const expensesCtx = useContext(ExpensesContext);
 
   const editedExpenseId = route.params?.expenseId;
@@ -69,7 +69,7 @@ function ManageExpense({ route, navigation }) {
       )}
     </View>
   );
-}
+};
 
 export default ManageExpense;
 

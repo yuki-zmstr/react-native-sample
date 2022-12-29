@@ -1,5 +1,5 @@
 /* eslint-disable no-case-declarations */
-import { createContext, useReducer } from 'react';
+import React, { createContext, useReducer } from 'react';
 
 const DUMMY_EXPENSES = [
   {

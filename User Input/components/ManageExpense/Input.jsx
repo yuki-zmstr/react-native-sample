@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TextInput, StyleSheet } from 'react-native';
-import { GlobalStyles } from '../../constants/styles';
+import GlobalStyles from '../../constants/styles';
 
 const Input = ({ label, style, textInputConfig }) => {
   const inputStyles = [styles.input];

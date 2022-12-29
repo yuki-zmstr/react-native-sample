@@ -1,3 +1,4 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -7,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import ManageExpense from './screens/ManageExpense';
 import RecentExpenses from './screens/RecentExpenses';
 import AllExpenses from './screens/AllExpenses';
-import { GlobalStyles } from './constants/styles';
+import GlobalStyles from './constants/styles';
 import IconButton from './components/UI/IconButton';
 import ExpensesContextProvider from './store/expenses-context';
 
@@ -56,7 +57,7 @@ const ExpensesOverview = () => {
   );
 };
 
-export default function App() {
+const App = () => {
   return (
     <>
       <StatusBar style='light' />
@@ -85,4 +86,6 @@ export default function App() {
       </ExpensesContextProvider>
     </>
   );
-}
+};
+
+export default App;

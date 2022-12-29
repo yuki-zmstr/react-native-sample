@@ -24,7 +24,7 @@ function ExpensesOverview() {
         tabBarActiveTintColor: GlobalStyles.colors.accent500,
         headerRight: ({ tintColor }) => (
           <IconButton
-            icon="add"
+            icon='add'
             size={24}
             color={tintColor}
             onPress={() => {
@@ -35,25 +35,21 @@ function ExpensesOverview() {
       })}
     >
       <BottomTabs.Screen
-        name="RecentExpenses"
+        name='RecentExpenses'
         component={RecentExpenses}
         options={{
           title: 'Recent Expenses',
           tabBarLabel: 'Recent',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="hourglass" size={size} color={color} />
-          ),
+          tabBarIcon: ({ color, size }) => <Ionicons name='hourglass' size={size} color={color} />,
         }}
       />
       <BottomTabs.Screen
-        name="AllExpenses"
+        name='AllExpenses'
         component={AllExpenses}
         options={{
           title: 'All Expenses',
           tabBarLabel: 'All Expenses',
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="calendar" size={size} color={color} />
-          ),
+          tabBarIcon: ({ color, size }) => <Ionicons name='calendar' size={size} color={color} />,
         }}
       />
     </BottomTabs.Navigator>
@@ -63,7 +59,7 @@ function ExpensesOverview() {
 export default function App() {
   return (
     <>
-      <StatusBar style="light" />
+      <StatusBar style='light' />
       <ExpensesContextProvider>
         <NavigationContainer>
           <Stack.Navigator
@@ -73,12 +69,12 @@ export default function App() {
             }}
           >
             <Stack.Screen
-              name="ExpensesOverview"
+              name='ExpensesOverview'
               component={ExpensesOverview}
               options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="ManageExpense"
+              name='ManageExpense'
               component={ManageExpense}
               options={{
                 presentation: 'modal',

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Alert } from 'react-native';
 import AuthContent from '../components/Auth/AuthContent';
 import { AuthContext } from '../store/auth-context';
@@ -14,11 +14,11 @@ function LoginScreen() {
     setIsAuthenticating(true);
     try {
       const token = await login(email, password);
-      authCtx.authenicate(token);
+      authCtx.authenticate(token);
     } catch (error) {
       Alert.alert('Login failed', 'Please check your credentials.');
+      setIsAuthenticating(false);
     }
-    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
